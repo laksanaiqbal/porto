@@ -53,7 +53,19 @@ image.png<!DOCTYPE html>
                 box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
                 z-index: 1000;
             }
-
+            .edu-exp-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                margin-bottom: 0.5rem;
+            }
+            .edu-exp-date {
+                color: var(--accent-color);
+                font-weight: 500;
+                font-size: 1rem;
+                white-space: nowrap;
+                margin-left: 1rem;
+            }
             .nav-links {
                 max-width: 1200px;
                 margin: 0 auto;
@@ -115,8 +127,8 @@ image.png<!DOCTYPE html>
             }
 
             .profile-img {
-                width: 200px;
-                height: 200px;
+                width: 400px;
+                height: 400px;
                 border-radius: 50%;
                 margin-bottom: 2rem;
                 border: 3px solid var(--accent-color);
@@ -139,31 +151,32 @@ image.png<!DOCTYPE html>
             }
 
             .card h3 {
-                color: var(--primary-color);
-                margin-bottom: 1rem;
+                color: var(--accent-color);
+                background-color: rgba(255, 184, 0, 0.2);
+                padding: 0.2rem 0.5rem;
+                border-radius: 5px;
             }
 
-            /* Skills Section */
-            .skills-grid {
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 2rem;
-                max-width: 900px;
-                margin: 0 auto;
-            }
-
-            .skill-card {
-                background: var(--darker-bg);
-                padding: 1.5rem;
-                border-radius: 10px;
-                text-align: left;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-                transition: transform 0.3s ease;
+            .card p,
+            .card ul li {
+                color: var(--light-text);
+                background-color: rgba(27, 31, 59, 0.5);
+                padding: 0.2rem 0.5rem;
+                border-radius: 5px;
             }
 
             .skill-card h3 {
-                margin-bottom: 1rem;
                 color: var(--accent-color);
+                /* background-color: rgba(255, 184, 0, 0.2); */
+                padding: 0.2rem 0.5rem;
+                border-radius: 5px;
+            }
+
+            .skill-card p {
+                color: var(--light-text);
+                background-color: rgba(27, 31, 59, 0.5);
+                padding: 0.2rem 0.5rem;
+                border-radius: 5px;
             }
 
             .skill-level {
@@ -264,15 +277,35 @@ image.png<!DOCTYPE html>
         </nav>
 
         <section id="about" data-aos="fade-up">
-            <div class="container about-content">
-                <img
-                    src="profile.jpg"
-                    alt="Laksana Iqbal"
-                    class="profile-img"
-                    style="object-fit: cover"
-                />
-                <h1>Laksana Iqbal</h1>
-                <p>Production Support & Web Developer</p>
+            <div class="container about-hero">
+                <div class="about-text">
+                    <span class="about-subtitle"
+                        >GET EVERY SINGLE SOLUTIONS.</span
+                    >
+                    <h1 class="about-title">
+                        Halo, Saya<br />Laksana Iqbal Utama
+                    </h1>
+                    <p class="about-desc">
+                        Saya sekarang bekerja di PT. Nusantara Berkah Digital
+                        dengan posisi sebagai Production Support. Saya lulus
+                        dari Program Studi S1 Teknik Komputer di Universitas
+                        Diponegoro dengan IPK 3,69. Saya memiliki keilmuan pada
+                        bidang Data Management. Saya lahir di Wonogiri, Jawa
+                        Tengah pada 23 Juni 1999. Semoga pribadi saya dapat
+                        berkesan untuk semua.
+                    </p>
+                    <div class="about-actions">
+                        <a href="#experience" class="btn-primary">Learn More</a>
+                        <a href="#contact" class="btn-secondary">Hire Me</a>
+                    </div>
+                </div>
+                <div class="about-photo">
+                    <img
+                        src="profile.jpg"
+                        alt="Laksana Iqbal"
+                        class="profile-hero-img"
+                    />
+                </div>
             </div>
         </section>
 
@@ -280,9 +313,11 @@ image.png<!DOCTYPE html>
             <div class="container">
                 <h2>Education</h2>
                 <div class="card" data-aos="fade-right">
-                    <h3>Universitas Diponegoro – Semarang</h3>
+                    <div class="edu-exp-header">
+                        <h3>Universitas Diponegoro – Semarang</h3>
+                        <span class="edu-exp-date">2018 - 2022</span>
+                    </div>
                     <p>S1 Teknik Komputer</p>
-                    <p>2018 - 2022</p>
                     <p>IPK: 3.69/4.00</p>
                     <p>
                         Tugas Akhir: Pembuatan Sistem Informasi Situs Penjualan
@@ -291,16 +326,22 @@ image.png<!DOCTYPE html>
                     </p>
                 </div>
                 <div class="card" data-aos="fade-left">
-                    <h3>SMA N 2 Wonogiri</h3>
-                    <p>2014 - 2017</p>
+                    <div class="edu-exp-header">
+                        <h3>SMA N 2 Wonogiri</h3>
+                        <span class="edu-exp-date">2014 - 2017</span>
+                    </div>
                 </div>
                 <div class="card" data-aos="fade-right">
-                    <h3>SMP N 1 Wonogiri</h3>
-                    <p>2011 - 2014</p>
+                    <div class="edu-exp-header">
+                        <h3>SMP N 1 Wonogiri</h3>
+                        <span class="edu-exp-date">2011 - 2014</span>
+                    </div>
                 </div>
                 <div class="card" data-aos="fade-left">
-                    <h3>SD N 2 Wonoboyo</h3>
-                    <p>2005 - 2011</p>
+                    <div class="edu-exp-header">
+                        <h3>SD N 2 Wonoboyo</h3>
+                        <span class="edu-exp-date">2005 - 2011</span>
+                    </div>
                 </div>
             </div>
         </section>
@@ -309,9 +350,11 @@ image.png<!DOCTYPE html>
             <div class="container">
                 <h2>Work Experience</h2>
                 <div class="card" data-aos="fade-right">
-                    <h3>PT. NUSANTARA BERKAH DIGITAL - YOGYAKARTA</h3>
+                    <div class="edu-exp-header">
+                        <h3>PT. NUSANTARA BERKAH DIGITAL - YOGYAKARTA</h3>
+                        <span class="edu-exp-date">Juli 2024 - Sekarang</span>
+                    </div>
                     <p>Production Support</p>
-                    <p>Juli 2024 - Sekarang</p>
                     <ul>
                         <li>Optimasi Query di database</li>
                         <li>Troubleshooting data</li>
@@ -321,9 +364,11 @@ image.png<!DOCTYPE html>
                     </ul>
                 </div>
                 <div class="card" data-aos="fade-left">
-                    <h3>PT. INTI EVERSPRING INDONESIA - SERANG</h3>
+                    <div class="edu-exp-header">
+                        <h3>PT. INTI EVERSPRING INDONESIA - SERANG</h3>
+                        <span class="edu-exp-date">Juni 2023 – Juli 2024</span>
+                    </div>
                     <p>Management Trainee</p>
-                    <p>Juni 2023 – Juli 2024</p>
                     <ul>
                         <li>Membangun Web App Koperasi</li>
                         <li>
@@ -334,9 +379,13 @@ image.png<!DOCTYPE html>
                     </ul>
                 </div>
                 <div class="card" data-aos="fade-right">
-                    <h3>Havara Consulting - Yogyakarta</h3>
+                    <div class="edu-exp-header">
+                        <h3>Havara Consulting - Yogyakarta</h3>
+                        <span class="edu-exp-date"
+                            >Oktober 2020 – Desember 2020</span
+                        >
+                    </div>
                     <p>Web Developer Intern</p>
-                    <p>Oktober 2020 – Desember 2020</p>
                     <ul>
                         <li>Implementasi UI/UX sebagai front-end</li>
                         <li>Membuat back-end</li>
@@ -468,3 +517,101 @@ image.png<!DOCTYPE html>
         </script>
     </body>
 </html>
+
+<style>
+    .about-hero {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 2rem;
+        min-height: 500px;
+        background: #f5f7fa;
+        border-radius: 20px;
+        padding: 3rem 2rem;
+        box-shadow: 0 8px 32px rgba(27, 31, 59, 0.08);
+    }
+    .about-text {
+        flex: 1 1 0;
+        max-width: 540px;
+    }
+    .about-subtitle {
+        color: #ffb800;
+        font-size: 1rem;
+        font-weight: 500;
+        letter-spacing: 1px;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+    .about-title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #1b1f3b;
+        margin-bottom: 1.5rem;
+        line-height: 1.1;
+    }
+    .about-desc {
+        color: #3a3a3a;
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+    .about-actions {
+        display: flex;
+        gap: 1rem;
+    }
+    .btn-primary {
+        background: #ffb800;
+        color: #fff;
+        padding: 0.8rem 2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        transition: background 0.2s;
+        border: none;
+    }
+    .btn-primary:hover {
+        background: #c58d01;
+    }
+    .btn-secondary {
+        background: #fff;
+        color: #1b1f3b;
+        padding: 0.8rem 2rem;
+        border-radius: 8px;
+        font-weight: 600;
+        text-decoration: none;
+        border: 2px solid #e0e0e0;
+        transition: background 0.2s, color 0.2s;
+    }
+    .btn-secondary:hover {
+        background: #f2f2f2;
+        color: #ff5e5e;
+    }
+    .about-photo {
+        flex: 1 1 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .profile-hero-img {
+        width: 340px;
+        height: 440px;
+        object-fit: cover;
+        border-radius: 18px;
+        box-shadow: 0 8px 32px rgba(27, 31, 59, 0.18);
+        background: #eaeaea;
+    }
+    @media (max-width: 900px) {
+        .about-hero {
+            flex-direction: column-reverse;
+            padding: 2rem 1rem;
+            min-height: unset;
+        }
+        .about-photo {
+            margin-bottom: 2rem;
+        }
+        .profile-hero-img {
+            width: 90vw;
+            max-width: 340px;
+            height: auto;
+        }
+    }
+</style>
