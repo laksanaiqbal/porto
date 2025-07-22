@@ -1,0 +1,470 @@
+image.png<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Laksana Iqbal - Portfolio</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+        />
+        <style>
+            :root {
+                --primary-color: #1b1f3b;
+                --accent-color: #ffb800;
+                --dark-bg: #1b1f3b;
+                --darker-bg: #141731;
+                --light-text: #ffffff;
+                --gray-text: #e3e3e3;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html {
+                scroll-behavior: smooth;
+            }
+
+            body {
+                font-family: "Poppins", sans-serif;
+                line-height: 1.6;
+                color: var(--light-text);
+                background-color: var(--dark-bg);
+            }
+
+            /* Navbar Styles */
+            .navbar {
+                position: fixed;
+                top: 0;
+                width: 100%;
+                background-color: var(--darker-bg);
+                padding: 1rem;
+                box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+                z-index: 1000;
+            }
+
+            .nav-links {
+                max-width: 1200px;
+                margin: 0 auto;
+                display: flex;
+                justify-content: center;
+                gap: 2rem;
+            }
+
+            .nav-links a {
+                text-decoration: none;
+                color: var(--gray-text);
+                font-weight: 500;
+                transition: color 0.3s ease;
+            }
+
+            .nav-links a:hover {
+                color: var(--accent-color);
+            }
+
+            /* Section Styles */
+            section {
+                padding: 5rem 1rem;
+                min-height: 100vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: var(--dark-bg);
+            }
+
+            section:nth-child(even) {
+                background-color: var(--darker-bg);
+            }
+
+            .container {
+                max-width: 1200px;
+                margin: 0 auto;
+                width: 100%;
+            }
+
+            h1,
+            h2 {
+                color: var(--accent-color);
+                margin-bottom: 1.5rem;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+                font-weight: 700;
+            }
+
+            h2 {
+                font-size: 2rem;
+                font-weight: 600;
+            }
+
+            /* About Section */
+            .about-content {
+                text-align: center;
+            }
+
+            .profile-img {
+                width: 200px;
+                height: 200px;
+                border-radius: 50%;
+                margin-bottom: 2rem;
+                border: 3px solid var(--accent-color);
+            }
+
+            /* Education & Experience Section */
+            .card {
+                background: var(--darker-bg);
+                padding: 2rem;
+                border-radius: 10px;
+                margin-bottom: 1.5rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease;
+                border: 1px solid rgba(255, 255, 255, 0.1);
+            }
+
+            .card:hover {
+                transform: translateY(-5px);
+                border-color: var(--accent-color);
+            }
+
+            .card h3 {
+                color: var(--primary-color);
+                margin-bottom: 1rem;
+            }
+
+            /* Skills Section */
+            .skills-grid {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+                max-width: 900px;
+                margin: 0 auto;
+            }
+
+            .skill-card {
+                background: var(--darker-bg);
+                padding: 1.5rem;
+                border-radius: 10px;
+                text-align: left;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+                transition: transform 0.3s ease;
+            }
+
+            .skill-card h3 {
+                margin-bottom: 1rem;
+                color: var(--accent-color);
+            }
+
+            .skill-level {
+                width: 100%;
+                height: 10px;
+                background: var(--dark-bg);
+                border-radius: 5px;
+                margin-top: 0.5rem;
+                overflow: hidden;
+            }
+
+            .skill-level-fill {
+                height: 100%;
+                background: var(--accent-color);
+                border-radius: 5px;
+                transition: width 1s ease;
+            }
+
+            /* Contact Section */
+            #contact {
+                padding: 6rem 1rem;
+            }
+
+            .contact-container {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 3rem;
+                max-width: 1200px;
+                margin: 0 auto;
+            }
+
+            .contact-info {
+                text-align: left;
+            }
+
+            .social-links {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 1.5rem;
+                margin-top: 2rem;
+            }
+
+            .social-links a {
+                display: flex;
+                align-items: center;
+                color: var(--gray-text);
+                font-size: 1.2rem;
+                text-decoration: none;
+                padding: 1rem;
+                background: var(--darker-bg);
+                border-radius: 10px;
+                transition: all 0.3s ease;
+            }
+
+            .social-links a i {
+                margin-right: 0.5rem;
+                font-size: 1.5rem;
+            }
+
+            .social-links a:hover {
+                background: var(--accent-color);
+                color: var(--darker-bg);
+                transform: translateY(-3px);
+            }
+
+            .map-container {
+                width: 100%;
+                height: 450px;
+                border-radius: 10px;
+                overflow: hidden;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            }
+
+            @media (max-width: 768px) {
+                .contact-container {
+                    grid-template-columns: 1fr;
+                }
+
+                .social-links {
+                    grid-template-columns: 1fr;
+                }
+
+                .skills-grid {
+                    grid-template-columns: 1fr;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <div class="nav-links">
+                <a href="#about">About</a>
+                <a href="#education">Education</a>
+                <a href="#experience">Work Experience</a>
+                <a href="#skills">Skills</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+
+        <section id="about" data-aos="fade-up">
+            <div class="container about-content">
+                <img
+                    src="profile.jpg"
+                    alt="Laksana Iqbal"
+                    class="profile-img"
+                    style="object-fit: cover"
+                />
+                <h1>Laksana Iqbal</h1>
+                <p>Production Support & Web Developer</p>
+            </div>
+        </section>
+
+        <section id="education" data-aos="fade-up">
+            <div class="container">
+                <h2>Education</h2>
+                <div class="card" data-aos="fade-right">
+                    <h3>Universitas Diponegoro – Semarang</h3>
+                    <p>S1 Teknik Komputer</p>
+                    <p>2018 - 2022</p>
+                    <p>IPK: 3.69/4.00</p>
+                    <p>
+                        Tugas Akhir: Pembuatan Sistem Informasi Situs Penjualan
+                        Mebel Dengan Metode Prototype Menggunakan Kerangka -
+                        Kerja Laravel
+                    </p>
+                </div>
+                <div class="card" data-aos="fade-left">
+                    <h3>SMA N 2 Wonogiri</h3>
+                    <p>2014 - 2017</p>
+                </div>
+                <div class="card" data-aos="fade-right">
+                    <h3>SMP N 1 Wonogiri</h3>
+                    <p>2011 - 2014</p>
+                </div>
+                <div class="card" data-aos="fade-left">
+                    <h3>SD N 2 Wonoboyo</h3>
+                    <p>2005 - 2011</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" data-aos="fade-up">
+            <div class="container">
+                <h2>Work Experience</h2>
+                <div class="card" data-aos="fade-right">
+                    <h3>PT. NUSANTARA BERKAH DIGITAL - YOGYAKARTA</h3>
+                    <p>Production Support</p>
+                    <p>Juli 2024 - Sekarang</p>
+                    <ul>
+                        <li>Optimasi Query di database</li>
+                        <li>Troubleshooting data</li>
+                        <li>Reproducing Bug di Production</li>
+                        <li>Data Engineering and Management</li>
+                        <li>Support App Testing</li>
+                    </ul>
+                </div>
+                <div class="card" data-aos="fade-left">
+                    <h3>PT. INTI EVERSPRING INDONESIA - SERANG</h3>
+                    <p>Management Trainee</p>
+                    <p>Juni 2023 – Juli 2024</p>
+                    <ul>
+                        <li>Membangun Web App Koperasi</li>
+                        <li>
+                            Membangun Web App Computer Maintenance Manegement
+                            System
+                        </li>
+                        <li>Membangun Web App</li>
+                    </ul>
+                </div>
+                <div class="card" data-aos="fade-right">
+                    <h3>Havara Consulting - Yogyakarta</h3>
+                    <p>Web Developer Intern</p>
+                    <p>Oktober 2020 – Desember 2020</p>
+                    <ul>
+                        <li>Implementasi UI/UX sebagai front-end</li>
+                        <li>Membuat back-end</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" data-aos="fade-up">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-card" data-aos="zoom-in">
+                        <h3>MySQL</h3>
+                        <div class="skill-level">
+                            <div
+                                class="skill-level-fill"
+                                style="width: 90%"
+                            ></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-aos="zoom-in">
+                        <h3>PHP</h3>
+                        <div class="skill-level">
+                            <div
+                                class="skill-level-fill"
+                                style="width: 85%"
+                            ></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-aos="zoom-in">
+                        <h3>Laravel</h3>
+                        <div class="skill-level">
+                            <div
+                                class="skill-level-fill"
+                                style="width: 80%"
+                            ></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-aos="zoom-in">
+                        <h3>Codeigniter</h3>
+                        <div class="skill-level">
+                            <div
+                                class="skill-level-fill"
+                                style="width: 75%"
+                            ></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-aos="zoom-in">
+                        <h3>Microsoft Office</h3>
+                        <div class="skill-level">
+                            <div
+                                class="skill-level-fill"
+                                style="width: 85%"
+                            ></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-aos="zoom-in">
+                        <h3>Leadership</h3>
+                        <div class="skill-level">
+                            <div
+                                class="skill-level-fill"
+                                style="width: 90%"
+                            ></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" data-aos="fade-up">
+            <div class="container">
+                <h2>Contact</h2>
+                <div class="contact-container">
+                    <div class="contact-info">
+                        <div class="social-links">
+                            <a
+                                href="https://www.instagram.com/laksanaiqbal/"
+                                target="_blank"
+                            >
+                                <i class="fab fa-instagram"></i>
+                                <span>Instagram</span>
+                            </a>
+                            <a
+                                href="https://www.linkedin.com/in/laksana-iqbal-885637126/"
+                                target="_blank"
+                            >
+                                <i class="fab fa-linkedin"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://github.com/" target="_blank">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="mailto:laksanaiqbal.li@gmail.com">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                            <a
+                                href="https://wa.me/081111111111"
+                                target="_blank"
+                            >
+                                <i class="fab fa-whatsapp"></i>
+                                <span>WhatsApp</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="map-container">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3952.8649475202014!2d110.94657707505239!3d-7.804118992216216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwNDgnMTQuOCJTIDExMMKwNTYnNTcuMCJF!5e0!3m2!1sid!2sid!4v1753150622812!5m2!1sid!2sid"
+                            width="100%"
+                            height="100%"
+                            style="border: 0"
+                            allowfullscreen=""
+                            loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                duration: 1000,
+                once: true,
+            });
+        </script>
+    </body>
+</html>
